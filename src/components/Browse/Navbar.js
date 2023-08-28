@@ -34,8 +34,8 @@ const Navbar = () => {
         href="/"
         className="nav-title"
       >
-        {/* Thay thế bằng hình ảnh của bạn hoặc văn bản */}
-        {/* <img className='nav_logo' src='đường-dẫn-đến-hình-ảnh-của-bạn.png' alt='Netflix Logo' /> */}
+        {/* Thay thế bằng hình ảnh hoặc văn bản */}
+
         <p>Movie App</p>
       </a>
       <a href="/search">
