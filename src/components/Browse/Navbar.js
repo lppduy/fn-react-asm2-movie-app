@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './NavBar.css';
+import './Navbar.css';
 
-const NavBar = () => {
-  // Sử dụng Hook useState để theo dõi trạng thái của NavBar (show/hide)
+const Navbar = () => {
+  // Sử dụng Hook useState để theo dõi trạng thái của Navbar (show/hide)
   const [show, setShow] = useState(false);
 
   // Sử dụng Hook useEffect để thêm/xóa sự kiện scroll
@@ -58,4 +58,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

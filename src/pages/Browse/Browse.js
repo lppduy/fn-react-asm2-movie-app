@@ -4,13 +4,13 @@ import React from 'react';
 import { requests } from '../../api';
 import Banner from '../../components/Browse/Banner';
 import MovieList from '../../components/Browse/MovieList';
-import NavBar from '../../components/Browse/NavBar';
+import Navbar from '../../components/Browse/NavBar';
 
 const Browse = () => {
   return (
     <div className="app">
       {/* <h1>Browse</h1> */}
-      <NavBar />
+      <Navbar />
       <Banner />
       <MovieList
         title="Original"

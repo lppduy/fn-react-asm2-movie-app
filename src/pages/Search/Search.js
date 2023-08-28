@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import SearchResult from '../../components/Search/SearchResult';
 import SearchForm from '../../components/Search/SearchForm';
+import SearchResult from '../../components/Search/SearchResult';
 
+import Navbar from '../../components/Browse/Navbar';
 import './Search.css';
-import NavBar from '../../components/Browse/NavBar';
 
 const Search = () => {
   const [query, setQuery] = useState('');
@@ -19,7 +19,7 @@ const Search = () => {
 
   return (
     <div className="app">
-      <NavBar />
+      <Navbar />
       <SearchForm
         onSearch={handleSearch}
         onReset={resetSearch}
