@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import NavBar from '../../components/Browse/NavBar';
 import SearchResult from '../../components/Search/SearchResult';
-import SearchForm from '../../components/Search/SearchForm'; // Import SearchForm
+import SearchForm from '../../components/Search/SearchForm';
 
 import './Search.css';
+import NavBar from '../../components/Browse/NavBar';
 
 const Search = () => {
   const [query, setQuery] = useState('');

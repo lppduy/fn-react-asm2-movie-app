@@ -1,10 +1,10 @@
 import './Browse.css';
 
 import React from 'react';
+import { requests } from '../../api';
 import Banner from '../../components/Browse/Banner';
 import MovieList from '../../components/Browse/MovieList';
 import NavBar from '../../components/Browse/NavBar';
-import { requests } from '../../api';
 
 const Browse = () => {
   return (
