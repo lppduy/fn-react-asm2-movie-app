@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import { requests, fetchData } from '/src/api.js';
-// import requests from '../../api';
-import { requests, fetchData } from '../../api';
+import { fetchData, requests } from '../../api';
 import './Banner.css';
 
 const Banner = () => {
