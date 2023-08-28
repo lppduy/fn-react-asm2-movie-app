@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Browse from './pages/Browse/Browse';
-
-import Search from './pages/search/Search';
+import Search from './pages/Search/Search';
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './NavBar.css';
 
-const Navbar = () => {
+const NavBar = () => {
   // Sử dụng Hook useState để theo dõi trạng thái của NavBar (show/hide)
   const [show, setShow] = useState(false);
 
@@ -58,4 +58,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
