@@ -12,6 +12,7 @@ const MovieList = ({ title, fetchUrl, isLargeRow }) => {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState('');
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [backdrop, setBackdrop] = useState('');
 
   // Sử dụng useEffect để gọi API và lấy danh sách phim
   useEffect(() => {
@@ -34,8 +35,12 @@ const MovieList = ({ title, fetchUrl, isLargeRow }) => {
     if (selectedMovie && selectedMovie.id === movie.id) {
       setSelectedMovie(null);
       setTrailerUrl('');
+      setBackdrop(''); // Đặt backdrop về trống khi không có phim nào được chọn
     } else {
       setSelectedMovie(movie);
+      console.log(movie);
+      setBackdrop(movie['backdrop_path']); // Đặt backdrop khi có phim được chọn
+      console.log('backdrop', backdrop);
       movieTrailer(movie?.title || '')
         .then(url => {
           const urlParams = new URLSearchParams(new URL(url).search);
@@ -68,6 +73,7 @@ const MovieList = ({ title, fetchUrl, isLargeRow }) => {
           <MovieDetail
             movieData={selectedMovie}
             movieTrailer={trailerUrl}
+            backdropImage={backdrop}
           />
         )}
       </div>

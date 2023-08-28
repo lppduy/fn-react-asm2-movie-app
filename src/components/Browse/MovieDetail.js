@@ -3,6 +3,8 @@ import YouTube from 'react-youtube';
 
 import './MovieDetail.css';
 
+const base_url = 'https://image.tmdb.org/t/p/original';
+
 // Cấu hình cho video YouTube
 const opts = {
   height: '400',
@@ -13,7 +15,7 @@ const opts = {
 };
 
 // Component MovieDetail
-const MovieDetail = ({ movieTrailer, movieData }) => {
+const MovieDetail = ({ movieTrailer, movieData, backdropImage }) => {
   // Destructuring các thuộc tính từ đối tượng movieData
   const { release_date, title, name, overview, vote_average } = movieData;
 
@@ -28,13 +30,30 @@ const MovieDetail = ({ movieTrailer, movieData }) => {
         <br></br>
         <p>{overview}</p>
       </div>
-      <div className="movie_detail_trailer">
-        {/* Sử dụng thư viện react-youtube để hiển thị trailer */}
-        <YouTube
-          videoId={movieTrailer}
-          opts={opts}
-        />
-      </div>
+      {movieTrailer ? (
+        // Nếu có video Trailer hoặc Teaser, hiển thị video
+        <div className="movie_detail_trailer">
+          {/* Sử dụng thư viện react-youtube để hiển thị trailer */}
+          <YouTube
+            videoId={movieTrailer}
+            opts={opts}
+          />
+        </div>
+      ) : backdropImage ? (
+        // Nếu không có video Trailer hoặc Teaser, nhưng có ảnh Backdrop, hiển thị ảnh Backdrop
+        <div className="movie_detail_backdrop">
+          <img
+            src={`${base_url}${backdropImage}`} // Sử dụng backdropImage để tạo URL hình ảnh backdrop
+            alt="Backdrop"
+            className="backdrop-image"
+          />
+        </div>
+      ) : (
+        // Nếu không có cả video Trailer hoặc ảnh Backdrop thay thế, có thể hiển thị một thông báo hoặc gì đó khác
+        <div className="movie_detail_no_content">
+          <p>No Trailer or Backdrop Available</p>
+        </div>
+      )}
     </div>
   );
 };

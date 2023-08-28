@@ -14,3 +14,8 @@
 .movie-list-title {
   font-family: 'Arial';
 }
+.movie_detail_backdrop img {
+  max-width: 100%; /* Giới hạn chiều rộng tối đa là 100% của phần tử chứa */
+  max-height: 400px; /* Giới hạn chiều cao tối đa là 400px */
+  width: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
+}
