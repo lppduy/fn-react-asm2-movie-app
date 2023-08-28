@@ -8,7 +8,7 @@ const instance = axios.create({
 });
 
 // Định nghĩa các yêu cầu API dưới dạng các đối tượng thuộc tính
-const requests = {
+export const requests = {
   // Yêu cầu dữ liệu phim nổi bật trong tuần
   fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
 
@@ -41,15 +41,12 @@ const requests = {
 export const fetchData = async request => {
   try {
     // Gửi yêu cầu API bằng Axios và nhận phản hồi
-    const response = await instance.get(requests[request]);
+    const response = await instance.get(request);
 
     // Trả về dữ liệu từ phản hồi
-    return response.data;
+    return response;
   } catch (error) {
     // Xử lý lỗi nếu có
     console.error(error);
   }
 };
-
-// Xuất đối tượng requests để có thể sử dụng ở nhiều nơi khác trong ứng dụng
-export default requests;
