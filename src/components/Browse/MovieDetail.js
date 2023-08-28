@@ -49,7 +49,7 @@ const MovieDetail = ({ movieTrailer, movieData, backdropImage }) => {
           />
         </div>
       ) : (
-        // Nếu không có cả video Trailer hoặc ảnh Backdrop thay thế, có thể hiển thị một thông báo hoặc gì đó khác
+        // Nếu không có cả video Trailer hoặc ảnh Backdrop thay thế
         <div className="movie_detail_no_content">
           <p>No Trailer or Backdrop Available</p>
         </div>
