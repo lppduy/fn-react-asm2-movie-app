@@ -5,7 +5,7 @@ const NavBar = () => {
   // Sử dụng Hook useState để theo dõi trạng thái của NavBar (show/hide)
   const [show, setShow] = useState(false);
 
-  // Sử dụng Hook useEffect để thêm/xóa sự kiện scroll khi component được gắn/diệt
+  // Sử dụng Hook useEffect để thêm/xóa sự kiện scroll
   useEffect(() => {
     // Hàm xử lý sự kiện scroll
     const handleScroll = () => {
