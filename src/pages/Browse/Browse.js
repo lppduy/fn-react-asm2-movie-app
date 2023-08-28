@@ -1,19 +1,19 @@
 import './Browse.css';
 
 import React from 'react';
-import Navbar from '../../components/Browse/Navbar';
 import Banner from '../../components/Browse/Banner';
 import MovieList from '../../components/Browse/MovieList';
+import NavBar from '../../components/Browse/NavBar';
 import { requests } from '../../api';
 
 const Browse = () => {
   return (
     <div className="app">
       {/* <h1>Browse</h1> */}
-      <Navbar />
+      <NavBar />
       <Banner />
       <MovieList
-        title=""
+        title="Original"
         isLargeRow
         fetchUrl={requests.fetchNetflixOriginals}
       />
