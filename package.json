@@ -11,7 +11,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "3.5.0",
     "react-youtube": "^7.11.3"
   },
   "scripts": {
@@ -31,5 +31,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/lppduy/fn-react-asm2-movie-app.git",
+  "author": "lppduy <lephamphuongduy@gmail.com>",
+  "license": "MIT"
 }
